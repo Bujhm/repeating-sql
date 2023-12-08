@@ -4,7 +4,7 @@ Create Date: 07/12/2023
 Decscription: Get all invoices who's billing city is starts with P or starts with D?
 */
 
--- % -> i dont catre what comes next
+-- % -> i dont care what comes next
 SELECT
 	i.CustomerId,
 	i.InvoiceDate,

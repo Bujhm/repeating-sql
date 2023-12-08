@@ -4,7 +4,7 @@ Create Date: 07/12/2023
 Decscription: How many invoices were billed in cities starts with B? Another requirement --> B anywhere in it's name.
 */
 
--- % -> i dont catre what comes next
+-- % -> i dont care what comes next
 SELECT
 	i.CustomerId,
 	i.InvoiceDate,

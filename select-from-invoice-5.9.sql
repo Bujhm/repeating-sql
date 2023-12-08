@@ -1,0 +1,23 @@
+/* 
+Created by: Ihor Semeniuk
+Create Date: 07/12/2023
+Decscription: Get all invoices that are greater than $1.98 from any cities whose name starts with P or starts with D?
+*/
+
+-- % -> i dont care what comes next
+-- PEMDAS -> Parenthesis, Exponents, Multiplication/Division, Addition/Substraction
+-- BEMDAS -> Brackets, Exponents, Multiplication/Division, Addition/Substraction
+SELECT
+	i.CustomerId,
+	i.InvoiceDate,
+	i.BillingAddress,
+	i.BillingCity,
+	i.total
+FROM 
+	Invoice AS i
+WHERE
+    i.Total > 1.98 
+    AND (
+            i.BillingCity LIKE 'P%' OR i.BillingCity LIKE 'D%'
+        )
+ORDER BY i.CustomerId
