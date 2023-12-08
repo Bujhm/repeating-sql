@@ -1,9 +1,10 @@
 /* 
 Created by: Ihor Semeniuk
 Create Date: 07/12/2023
-Decscription: How many invoices were billed after 2010-05-22 00:00:00?
+Decscription: Get all invoices who's billing city is starts with P or starts with D?
 */
 
+-- % -> i dont catre what comes next
 SELECT
 	i.CustomerId,
 	i.InvoiceDate,
@@ -13,5 +14,5 @@ SELECT
 FROM 
 	Invoice AS i
 WHERE
-    DATE(i.InvoiceDate) > '2010-05-22' AND i.Total < 3.00
+    i.BillingCity LIKE 'P%' OR i.BillingCity LIKE 'D%'
 ORDER BY i.CustomerId

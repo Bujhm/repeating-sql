@@ -4,7 +4,6 @@ Create Date: 07/12/2023
 Decscription: How many invoices were billed on 2010-05-22 00:00:00?
 */
 
--- % -> i dont catre what comes next
 SELECT
 	i.CustomerId,
 	i.InvoiceDate,
