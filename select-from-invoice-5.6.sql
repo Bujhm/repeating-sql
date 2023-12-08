@@ -1,7 +1,7 @@
 /* 
 Created by: Ihor Semeniuk
 Create Date: 07/12/2023
-Decscription: How many invoices were billed in cities starts with B? Another requirement --> B anywhere in it's name.
+Decscription: How many invoices were billed on 2010-05-22 00:00:00?
 */
 
 -- % -> i dont catre what comes next
@@ -14,7 +14,6 @@ SELECT
 FROM 
 	Invoice AS i
 WHERE
-	-- i.BillingCity Like 'B%'  --for 1st requirement
-	i.BillingCity Like '%B%'    --for 2nd requirement
-
+	-- i.InvoiceDate = '2010-05-22 00:00:00'
+    date(i.InvoiceDate) = '2010-05-22'
 ORDER BY i.CustomerId
