@@ -1,7 +1,7 @@
 /* 
 Created by: Ihor Semeniuk
 Create Date: 07/12/2023
-Decscription: How many invoices were billed on 2010-05-22 00:00:00?
+Decscription: How many invoices were billed after 2010-05-22 00:00:00?
 */
 
 -- % -> i dont catre what comes next
@@ -14,6 +14,5 @@ SELECT
 FROM 
 	Invoice AS i
 WHERE
-	-- i.InvoiceDate = '2010-05-22 00:00:00'
-    DATE(i.InvoiceDate) = '2010-05-22'
+    DATE(i.InvoiceDate) > '2010-05-22' AND i.Total < 3.00
 ORDER BY i.CustomerId
