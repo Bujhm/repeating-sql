@@ -1,11 +1,11 @@
 /* 
 Created by: Ihor Semeniuk
 Create Date: 09/12/2023
-Decscription: Aggregate functions | what are our all time global sales?
+Decscription: Nesting functions
 */
 SELECT
-	SUM(Total) AS [Total sales],
-    AVG(Total) AS [Average sale],
+	ROUND(SUM(Total), 2) AS [Total sales],
+    ROUND(AVG(Total), 2) AS [Average sale],
     MAX(Total) AS [MAximum sale],
     MIN(Total) AS [Minimum sale],
     COUNT(*) AS [Number of sales]
